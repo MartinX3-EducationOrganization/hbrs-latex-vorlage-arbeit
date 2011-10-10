@@ -1,0 +1,103 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTex Vorlage                                                               %
+%-----------------------------------------------------------------------------%
+% Beteiligte Personen:                                                        %
+% Peter Hasse, Danimo Molkentin, Daniel Meißner                               %
+%-----------------------------------------------------------------------------%
+% Lizenz:                                                                     %
+% This program is free software; you can redistribute it and/or modify it     %
+% under the terms of the GNU General Public License as published by the       %
+% Free Software Foundation; either version 2, or (at your option) any         %
+% later version.                                                              %
+%                                                                             %
+% This program is distributed in the hope that it will be useful,             %
+% but WITHOUT ANY WARRANTY; without even the implied warranty of              %
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               %
+% GNU General Public License for more details.                                %
+%                                                                             %
+% You should have received a copy of the GNU General Public License           %
+% along with this program; if not, write to the Free Software                 %
+% Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA  %
+%-----------------------------------------------------------------------------%
+% Benutzung:                                                                  %
+% texlive-full (bei auf Debian basirenden Systemen)                           %
+% xelatex Arbeit.tex                                                          %
+% --> generiert Arbeit.pdf                                                    %
+%-----------------------------------------------------------------------------%
+% Letzte Aktualisierung: Januar 2011                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Anfang                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,11pt,smallheadings,headsepline,footsepline,titlepage,liststotoc,idxtotoc,bibtotoc]{scrartcl}
+\include{Meta}
+\usepackage{stylesheats/hbrs-inf}
+\begin{document}
+\begin{spacing}{1}
+  \pagenumbering{roman}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deckblatt                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+\include{sections/Deckblatt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Erklärung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{bisHauptteil}
+\include{sections/Erklaerung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Inhaltsverzeichnis                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents 
+\newpage 
+\include{sections/Abkürzungsverzeichnis}
+\newpage
+\end{spacing}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Einleitung                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{Hauptteil}
+\setcounter{page}{1}
+\pagenumbering{arabic} 
+\include{sections/Einleitung} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stand der Forschrung                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\include{sections/Stand_Forschung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auswertung                                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\include{sections/Auswertung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Zusammenfassung                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\include{sections/Zusammenfassung}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Literaturverzeichnis                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\bibliography{Literaturverzeichnis}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abbildungsverzeichnis                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ende                                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}

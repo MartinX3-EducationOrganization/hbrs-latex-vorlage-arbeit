@@ -1,0 +1,193 @@
+\usepackage{graphicx}
+%\usepackage[pdftex]{graphicx}
+\usepackage{ifpdf}
+\usepackage{datetime}
+\usepackage{rotating} %rotation of pictures
+\usepackage{graphicx}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+%\setmainfont[Mapping=tex-text]{Frutiger Linotype}
+\setlength{\headheight}{1.3\baselineskip} 
+
+\ifpdf
+\pdfinfo{
+    /Author (\ThesisAuthor)
+    /Title  (\ThesisTitle)
+    /Subject (\ThesisSubject)
+    /Keywords (\ThesisKeywords)
+}
+\fi
+
+% Links anklickbar machen
+\usepackage{hyperref}
+\usepackage[usenames]{color}
+\definecolor{darkblue}{rgb}{0,0,0.5} 
+\hypersetup{ 
+    colorlinks = true,
+    linkcolor = black,
+%   urlcolor = darkblue, % Bei Bedarf Schwarz machen
+    urlcolor = black,
+    citecolor = black,
+    breaklinks = true,
+    pdftitle={\ThesisTitle \ThesisSubject},
+    pdfauthor={\ThesisAuthor},
+    pdfcreator={\ThesisAuthor},
+    pdfsubject={\ThesisTitle \ThesisSubject},
+    pdfkeywords={\ThesisKeywords}
+} 
+
+% Glossar (muss vor ngerman stehen)
+%\usepackage[border=none, style=altlist, hypertoc=true, hyper=true, number=none, acronym=true]{glossary}
+%\renewcommand{\glossaryname}{Glossar}
+%\setacronymnamefmt{\gloshort}
+%\makeacronym
+%\makeglossary
+%\makeindex
+%\usepackage[style=long,acronym,toc]{glossaries}
+\usepackage[style=long,toc]{glossaries}
+\usepackage[printonlyused]{acronym}
+%usepackage[style=long]{glossaries}
+
+% Deutsch und passende Seitenränder
+\usepackage[ngerman]{babel}
+\usepackage[paper=a4paper,left=35mm,right=20mm,top=30mm,bottom=30mm]{geometry}
+
+% fuer Zitate
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hypernat}
+
+% Festlegung Art der Zitierung - Havardmethode: Abkuerzung Autor + Jahr
+\bibliographystyle{plainnat}
+%\setcitestyle{authoryear,square,aysep=,citesep=/}
+
+%\usepackage{helvet} % Serifenlose Schrift - explizit
+%\renewcommand{\familydefault}{\sfdefault}
+
+\clubpenalty=10000 % schliesst Schusterjungen aus
+\widowpenalty=10000 % schliesst Hurenkinder aus
+
+\usepackage{setspace}
+
+\onehalfspacing % einkommentieren für größeren zeilenabstand
+\parskip0.5ex % parskip auf font/2
+\parindent0ex % kein Einzug am Absatzbeginn
+
+\usepackage{titlesec}
+\titlespacing{\section}{0mm}{12pt}{5pt}
+\titlespacing{\subsection}{0mm}{11pt}{5pt}
+\titlespacing{\subsubsection}{0mm}{11pt}{5pt}
+\titlespacing{\paragraph}{0mm}{11pt}{0pt}
+
+% Kopfzeile und Fußzeile default
+\usepackage{lastpage}
+\usepackage[automark]{scrpage2}
+\pagestyle{scrheadings}
+\clearscrheadings
+\addtokomafont{pageheadfoot}{\upshape}
+%\cfoot{Seite \pagemark\ von \pageref{LastPage}}
+%\ihead{\ThesisTitle}
+
+% Kopfzeile und Fußzeile definiert für Seiten zwischen Deckblatt und dem Hauptteil
+\newpagestyle{bisHauptteil}{
+    {\hfill}
+    {\hfill}
+    {\ThesisTitle\hfill}}
+{
+    {\hfill}
+    {\hfill}
+    {\hfill\pagemark\hfill}
+}
+
+\newpagestyle{Hauptteil}{
+    {\hfill}
+    {\hfill}
+    {\ThesisTitle\hfill}}
+{
+    {\hfill}
+    {\hfill}
+    {\hfill\ Seite \pagemark\ von \pageref{LastPage}\hfill}
+}
+
+
+% Quellcode einfuegen und highlighten
+%\usepackage{listingsutf8}
+\usepackage{listings}
+\definecolor{light-gray}{gray}{0.80}
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt,showstringspaces=false}
+\lstset{basicstyle=\ttfamily\small,commentstyle=\itshape,backgroundcolor=\color{light-gray}}
+\lstset{captionpos=b,extendedchars=true,inputencoding=utf8,breaklines=true,language=C++}
+
+% 
+% WORKAROUND, damit lstlistoflistings funktioniert:
+% Quelle: http://www.komascript.de/node/477
+%
+% \makeatletter% --> De-TeX-FAQ
+% \renewcommand*{\lstlistoflistings}{%
+% \begingroup
+% \if@twocolumn
+% \@restonecoltrue\onecolumn
+% \else
+% \@restonecolfalse
+% \fi
+% \lol@heading
+% \setlength{\parskip}{\z@}%
+% \setlength{\parindent}{\z@}%
+% \setlength{\parfillskip}{\z@ \@plus 1fil}%
+% \@starttoc{lol}%
+% \if@restonecol\twocolumn\fi
+% \endgroup
+% }
+% \makeatother% --> \makeatletter
+
+% versucht, Umbrueche zu erzwingen, auch wenn es zu Lasten
+% des Schriftbildes geht. Hier gewaehlt, damit auf keinen Fall
+% Woerter im Blocksatz ueber den Rand laufen.
+\tolerance 9999
+
+
+%%%%%%%%
+%Makros
+%%%%%%%%
+
+% Figure Item, Caption
+\newcommand{\fhbrsfigure}[2]{%
+  \begin{figure}[h]
+    #1
+  \caption{#2}
+  \end{figure}%
+}
+
+% Graphicsname, Caption, width
+\newcommand{\fhbrsgraphics}[4]{%
+  \begin{figure}[h]
+  \begin{center}
+  \includegraphics[width=#3]{img/#1}
+  \end{center}
+  \caption{\label{#4}#2}
+  \end{figure}
+}
+
+% pos, Caption, Columns
+ \newenvironment{fhbrstable}[3]{%
+   \begin{table}[#1]
+   \caption{#3}
+    \begin{tabular*}{\textwidth}{#2}%
+ }{ %
+    \end{tabular*}
+  \end{table}%
+}
+
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\module}[1]{\texttt{#1}}
+
+\newcommand{\introterm}[1]{\emph{#1}}
+
+% Name, Comment
+\newcommand{\introglosterm}[2]{%
+\xglossary{name={#1},description={#2}}{\emph{#1}}%
+}
+
+\newcommand{\introglostermshort}[3]{%
+\xglossary{name={#1},description={#2. #3}}{#1 (\emph{#2})} %
+}

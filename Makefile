@@ -1,6 +1,8 @@
 DOCUMENT_NAME = Arbeit
 XELATEX = xelatex
 
+all: doc bib doc_twice
+
 default: 
 	@echo 'make bib    | Create bibliography, Arbeit.aux required. To create them ,run make doc.'
 	@echo 'make doc    | Create complete document. Read output and run make bib or make doc again if needed.'
@@ -10,6 +12,10 @@ bib:
 	bibtex $(DOCUMENT_NAME)
 
 doc: 
+	$(XELATEX) $(DOCUMENT_NAME).tex
+
+doc_twice: 
+	$(XELATEX) $(DOCUMENT_NAME).tex
 	$(XELATEX) $(DOCUMENT_NAME).tex
 
 clean:

@@ -4,6 +4,7 @@ XELATEX = xelatex
 all: doc bib doc_twice
 
 default: 
+	@echo 'make all    | Create complete document and bibliography
 	@echo 'make bib    | Create bibliography, Arbeit.aux required. To create them ,run make doc.'
 	@echo 'make doc    | Create complete document. Read output and run make bib or make doc again if needed.'
 	@echo 'make clean  | Cleaning working directory.'

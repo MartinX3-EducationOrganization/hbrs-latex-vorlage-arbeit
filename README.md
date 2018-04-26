@@ -3,19 +3,17 @@ Dies ist eine [LaTeX][1] Vorlage für wissenschaftliche Arbeiten gemäß den Vor
 
 ## Autoren
 - 2018
--- Urs Weishaupt
+..- Urs Weishaupt
 - 2011
--- Manuel Hachtkemper
--- Peter Hasse
--- Daniel Meißner
--- Danimo Molkentin
+..- Manuel Hachtkemper
+..- Peter Hasse
+..- Daniel Meißner
+..- Danimo Molkentin
 
 ## Lizenz
 Copyright (C) 2018 [Free Software Lab][4].
-Dieses Projekt ist unter der GNU GPLv3 lizenziert. Weitere Informationen dazu unter [LICENCE.md].
-
-
-
+Dieses Projekt ist unter der GNU GPLv3 lizenziert.
+Weitere Informationen dazu unter [LICENSE.md].
 
 [1]: https://www.latex-project.org/
 [2]: https://www.h-brs.de/de/inf

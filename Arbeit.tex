@@ -23,79 +23,79 @@
 \usepackage{aussehen/hbrs-inf}
 \newcommand{\secDir}{abschnitte} % configure section directory
 \begin{document}
-\begin{spacing}{1}
-  \pagenumbering{roman}
+    \begin{spacing}{1}
+        \pagenumbering{roman}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Deckblatt                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{empty}
-\include{\secDir/Deckblatt}
+        \pagestyle{empty}
+        \include{\secdir/deckblatt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Erklärung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{bisHauptteil}
-\include{\secDir/Erklärung}
+        \pagestyle{bisHauptteil}
+        \include{\secDir/Erklärung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inhaltsverzeichnis                             %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\tableofcontents 
-\newpage 
+        \tableofcontents
+        \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abbildungsverzeichnis                          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\listoffigures
+        \listoffigures
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abkürzungsverzeichnis                          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\include{\secDir/Abkürzungsverzeichnis}
-\newpage
-\end{spacing}
+        \include{\secDir/Abkürzungsverzeichnis}
+        \newpage
+    \end{spacing}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Einleitung                                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\pagestyle{Hauptteil}
-\setcounter{page}{1}
-\pagenumbering{arabic} 
-\include{\secDir/Einleitung} 
+    \pagestyle{Hauptteil}
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    \include{\secDir/Einleitung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Stand der Forschrung                           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\include{\secDir/Stand_Forschung}
+    \newpage
+    \include{\secDir/Stand_Forschung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Auswertung                                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\include{\secDir/Auswertung}
+    \newpage
+    \include{\secDir/Auswertung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Zusammenfassung                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\include{\secDir/Zusammenfassung}
+    \newpage
+    \include{\secDir/Zusammenfassung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Literaturverzeichnis                           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
+    \newpage
 % Literaturverzeichnis soll nicht nur Literatur heißen
-\renewcommand\refname{Literaturverzeichnis}
-\bibliography{Literaturverzeichnis}
+    \renewcommand\refname{Literaturverzeichnis}
+    \bibliography{Literaturverzeichnis}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Anhang                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\include{\secDir/Anhang}
+    \newpage
+    \include{\secDir/Anhang}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ende                                           %

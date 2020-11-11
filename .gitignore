@@ -17,3 +17,5 @@
 *.ind 
 sections/*.aux 
 images/*.aux
+#IntelliJ folder
+.idea

@@ -93,11 +93,10 @@
 \parskip0.5ex % parskip auf font/2
 \parindent0ex % kein Einzug am Absatzbeginn
 
-\usepackage{titlesec}
-\titlespacing{\section}{0mm}{12pt}{5pt}
-\titlespacing{\subsection}{0mm}{11pt}{5pt}
-\titlespacing{\subsubsection}{0mm}{11pt}{5pt}
-\titlespacing{\paragraph}{0mm}{11pt}{0pt}
+\RedeclareSectionCommand[beforeskip=12pt,afterskip=5pt]{section}
+\RedeclareSectionCommand[beforeskip=11pt,afterskip=5pt]{subsection}
+\RedeclareSectionCommand[beforeskip=11pt,afterskip=5pt]{subsubsection}
+\RedeclareSectionCommand[beforeskip=11pt,afterskip=0pt]{paragraph}
 
 % Kopfzeile und Fußzeile default
 \usepackage{lastpage}

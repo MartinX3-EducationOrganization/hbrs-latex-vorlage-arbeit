@@ -18,6 +18,11 @@ Einen Startpunkt zur Nutzung von [LaTeX][1] findest Du in unserer LEA Gruppe [Ar
 
 
 ## Autoren
+### 2020
+
+- Martin Dünkelmann
+
+
 ### 2018
 
 - Urs Weishaupt

@@ -25,34 +25,34 @@
 \usepackage{xunicode}
 \usepackage{xltxtra}
 %\setmainfont[Mapping=tex-text]{Frutiger Linotype}
-\setlength{\headheight}{1.3\baselineskip} 
+\setlength{\headheight}{1.3\baselineskip}
 
 \ifpdf
 \pdfinfo{
-    /Author (\ThesisAuthor)
-    /Title  (\ThesisTitle)
-    /Subject (\ThesisSubject)
-    /Keywords (\ThesisKeywords)
+/Author (\ThesisAuthor)
+/Title  (\ThesisTitle)
+/Subject (\ThesisSubject)
+/Keywords (\ThesisKeywords)
 }
 \fi
 
 % Links anklickbar machen
 \usepackage{hyperref}
 \usepackage[usenames]{color}
-\definecolor{darkblue}{rgb}{0,0,0.5} 
-\hypersetup{ 
-    colorlinks = true,
-    linkcolor = black,
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\hypersetup{
+colorlinks = true,
+linkcolor = black,
 %   urlcolor = darkblue, % Bei Bedarf Schwarz machen
-    urlcolor = black,
-    citecolor = black,
-    breaklinks = true,
-    pdftitle={\ThesisTitle \ThesisSubject},
-    pdfauthor={\ThesisAuthor},
-    pdfcreator={\ThesisAuthor},
-    pdfsubject={\ThesisTitle \ThesisSubject},
-    pdfkeywords={\ThesisKeywords}
-} 
+urlcolor = black,
+citecolor = black,
+breaklinks = true,
+pdftitle={\ThesisTitle \ThesisSubject},
+pdfauthor={\ThesisAuthor},
+pdfcreator={\ThesisAuthor},
+pdfsubject={\ThesisTitle \ThesisSubject},
+pdfkeywords={\ThesisKeywords}
+}
 
 % Glossar (muss vor ngerman stehen)
 %\usepackage[border=none, style=altlist, hypertoc=true, hyper=true, number=none, acronym=true]{glossary}
@@ -109,23 +109,23 @@
 
 % Kopfzeile und Fußzeile definiert für Seiten zwischen Deckblatt und dem Hauptteil
 \newpagestyle{bisHauptteil}{
-    {\hfill}
-    {\hfill}
-    {\ThesisTitle\hfill}}
+{\hfill}
+{\hfill}
+{\ThesisTitle\hfill}}
 {
-    {\hfill}
-    {\hfill}
-    {\hfill\pagemark}
+{\hfill}
+{\hfill}
+{\hfill\pagemark}
 }
 
 \newpagestyle{Hauptteil}{
-    {\hfill}
-    {\hfill}
-    {\ThesisTitle\hfill}}
+{\hfill}
+{\hfill}
+{\ThesisTitle\hfill}}
 {
-    {\hfill}
-    {\hfill}
-    {\hfill\ \pagemark}
+{\hfill}
+{\hfill}
+{\hfill\ \pagemark}
 }
 
 
@@ -171,30 +171,30 @@
 
 % Figure Item, Caption
 \newcommand{\fhbrsfigure}[2]{%
-  \begin{figure}[h]
+\begin{figure}[h]
     #1
-  \caption{#2}
-  \end{figure}%
+    \caption{#2}
+\end{figure}%
 }
 
 % Graphicsname, Caption, width
 \newcommand{\fhbrsgraphics}[4]{%
-  \begin{figure}[h]
-  \begin{center}
-  \includegraphics[width=#3]{img/#1}
-  \end{center}
-  \caption{\label{#4}#2}
-  \end{figure}
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[width=#3]{img/#1}
+    \end{center}
+    \caption{\label{#4}#2}
+\end{figure}
 }
 
 % pos, Caption, Columns
- \newenvironment{fhbrstable}[3]{%
-   \begin{table}[#1]
-   \caption{#3}
+\newenvironment{fhbrstable}[3]{%
+\begin{table}[#1]
+\caption{#3}
     \begin{tabular*}{\textwidth}{#2}%
- }{ %
-    \end{tabular*}
-  \end{table}%
+}{ %
+\end{tabular*}
+\end{table}%
 }
 
 \newcommand{\code}[1]{\texttt{#1}}

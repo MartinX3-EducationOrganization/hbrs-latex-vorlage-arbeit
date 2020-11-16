@@ -21,7 +21,6 @@
 \documentclass[a4paper,11pt,headings=small,headsepline,titlepage,listof=totoc,index=totoc,bibliography=totoc,bibliography=totocnumbered]{scrartcl}
 \include{Meta}
 \usepackage{aussehen/hbrs-inf}
-\newcommand{\secDir}{abschnitte} % configure section directory
 \begin{document}
     \begin{spacing}{1}
         \pagenumbering{roman}
@@ -31,13 +30,13 @@
 % Deckblatt                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \pagestyle{empty}
-        \include{\secdir/deckblatt}
+        \include{abschnitte/Deckblatt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Erklärung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         \pagestyle{bisHauptteil}
-        \include{\secDir/Erklärung}
+        \include{abschnitte/Erklärung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inhaltsverzeichnis                             %
@@ -53,7 +52,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abkürzungsverzeichnis                          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        \include{\secDir/Abkürzungsverzeichnis}
+        \include{abschnitte/Abkürzungsverzeichnis}
         \newpage
     \end{spacing}
 
@@ -63,25 +62,25 @@
     \pagestyle{Hauptteil}
     \setcounter{page}{1}
     \pagenumbering{arabic}
-    \include{\secDir/Einleitung}
+    \include{abschnitte/Einleitung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Stand der Forschrung                           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \newpage
-    \include{\secDir/Stand_Forschung}
+    \include{abschnitte/Stand_Forschung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Auswertung                                     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \newpage
-    \include{\secDir/Auswertung}
+    \include{abschnitte/Auswertung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Zusammenfassung                                %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \newpage
-    \include{\secDir/Zusammenfassung}
+    \include{abschnitte/Zusammenfassung}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Literaturverzeichnis                           %
@@ -95,7 +94,7 @@
 % Anhang                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \newpage
-    \include{\secDir/Anhang}
+    \include{abschnitte/Anhang}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Ende                                           %

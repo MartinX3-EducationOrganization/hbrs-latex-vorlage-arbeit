@@ -3,6 +3,7 @@ Dies ist eine [LaTeX][1] Vorlage für wissenschaftliche Arbeiten gemäß den [Vo
 
 ## Einstieg
 Um diese Vorlage nutzen zu können, muss [LaTeX][1] auf Deinem Rechner installiert sein. 
+Als compiler wird `XeLaTeX` verwendet. 
 
 ### LEA Gruppe
 Einen Startpunkt zur Nutzung von [LaTeX][1] findest Du in unserer LEA Gruppe [Arbeiten mit LaTeX][7]. Sie steht allen Angehörigen der Hochschule offen.

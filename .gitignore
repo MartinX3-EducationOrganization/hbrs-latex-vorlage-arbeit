@@ -6,8 +6,7 @@
 *.log 
 *.aux 
 *.blg 
-*.toc 
-*.log 
+*.toc
 *.bbl 
 *.lof 
 *.lot 

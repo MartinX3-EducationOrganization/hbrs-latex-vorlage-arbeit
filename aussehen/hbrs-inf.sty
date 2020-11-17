@@ -173,7 +173,7 @@ pdfkeywords={\ThesisKeywords}
 \newcommand{\fhbrsfigure}[2]{%
 \begin{figure}[h]
     #1
-    \caption{#2}
+    \caption{#2}\label{fig:figure}
 \end{figure}%
 }
 
@@ -191,7 +191,7 @@ pdfkeywords={\ThesisKeywords}
 \newenvironment{fhbrstable}[3]{%
 \begin{table}[#1]
 \caption{#3}
-    \begin{tabular*}{\textwidth}{#2}%
+    \begin{tabular*}{\textwidth}{#2}\label{tab:table}%
 }{ %
 \end{tabular*}
 \end{table}%

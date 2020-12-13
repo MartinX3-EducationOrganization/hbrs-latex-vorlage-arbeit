@@ -1,4 +1,5 @@
 DOCUMENT_NAME = Arbeit
+BIB = biber # BibLaTeX
 XELATEX = xelatex
 
 default: 
@@ -11,7 +12,7 @@ default:
 all: doc bib doc_twice
 
 bib: 
-	bibtex $(DOCUMENT_NAME)
+	$(BIB) $(DOCUMENT_NAME)
 
 doc: 
 	$(XELATEX) $(DOCUMENT_NAME).tex

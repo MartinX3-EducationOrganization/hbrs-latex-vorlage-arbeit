@@ -13,7 +13,9 @@
 *.idx 
 *.brf
 *.ilg
-*.ind 
+*.ind
+*.bak
+*.sav
 sections/*.aux 
 images/*.aux
 out

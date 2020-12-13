@@ -67,19 +67,21 @@ pdfkeywords={\ThesisKeywords}
 %usepackage[style=long]{glossaries}
 
 % Deutsch und passende Seitenränder
-\usepackage[ngerman]{babel} % TODO Die Pakete glossary und ngerman sind veraltet, stattdessen babel und glossaries benutzen.
+\usepackage[ngerman]{babel}
 \usepackage[paper=a4paper,left=40mm,right=20mm,top=25mm,bottom=10mm]{geometry}
 \setlength{\footskip}{6mm} % Abstand Seitenzahl zu Text
 
 
 %% Literatur
 % Zitate
-\usepackage{natbib}
 \usepackage{hypernat}
 
-% Literaturverzeichnis nach DIN 1505
-\bibliographystyle{natdin}
-
+% Literaturverzeichnis nach ISO 690 (Nachfolger von DIN 1505)
+% Further help at https://github.com/michal-h21/biblatex-iso690
+\usepackage[
+style=iso-authoryear, % or iso-numeric for numeric citation method
+]{biblatex}
+\addbibresource{Literaturverzeichnis.bib}
 
 %\usepackage{helvet} % Serifenlose Schrift - explizit
 %\renewcommand{\familydefault}{\sfdefault}

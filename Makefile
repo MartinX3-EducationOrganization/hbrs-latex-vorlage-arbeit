@@ -1,5 +1,6 @@
 DOCUMENT_NAME = Arbeit
 BIB = biber -output-directory=out # BibLaTeX
+GLOS = makeglossaries -d out # Glossaries
 XELATEX = xelatex -output-directory=out
 
 default: 
@@ -9,7 +10,7 @@ default:
 	@echo 'make clean  | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
 
 
-all: doc bib doc_twice
+all: doc gloss bib doc_twice
 
 bib: 
 	$(BIB) $(DOCUMENT_NAME)
@@ -23,3 +24,6 @@ doc:
 doc_twice: 
 	$(XELATEX) $(DOCUMENT_NAME)
 	$(XELATEX) $(DOCUMENT_NAME)
+
+gloss:
+	$(GLOS) $(DOCUMENT_NAME)

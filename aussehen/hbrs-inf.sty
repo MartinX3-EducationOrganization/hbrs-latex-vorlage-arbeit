@@ -54,17 +54,10 @@ pdfsubject={\ThesisTitle \ThesisSubject},
 pdfkeywords={\ThesisKeywords}
 }
 
-% Glossar (muss vor ngerman stehen)
-%\usepackage[border=none, style=altlist, hypertoc=true, hyper=true, number=none, acronym=true]{glossary} % TODO Die Pakete glossary und ngerman sind veraltet, stattdessen babel und glossaries benutzen.
-%\renewcommand{\glossaryname}{Glossar} % TODO Die Pakete glossary und ngerman sind veraltet, stattdessen babel und glossaries benutzen.
-%\setacronymnamefmt{\gloshort}
-%\makeacronym
-%\makeglossary
-%\makeindex
-%\usepackage[style=long,acronym,toc]{glossaries}
-\usepackage[style=long,toc]{glossaries}
-\usepackage[printonlyused]{acronym}
-%usepackage[style=long]{glossaries}
+% Abkürzungsverzeichnis (muss vor ngerman stehen)
+\usepackage[acronym, toc]{glossaries-extra}
+\makeglossaries
+\loadglsentries{datenbanken/Abkuerzungsverzeichnis.tex}
 
 % Deutsch und passende Seitenränder
 \usepackage[ngerman]{babel}

@@ -1,6 +1,6 @@
 DOCUMENT_NAME = Arbeit
-BIB = biber # BibLaTeX
-XELATEX = xelatex
+BIB = biber -output-directory=out # BibLaTeX
+XELATEX = xelatex -output-directory=out
 
 default: 
 	@echo 'make all    | Erstelle das komplette Dokument inklusive bib-Datei für das Literaturverzeichnis'
@@ -14,12 +14,12 @@ all: doc bib doc_twice
 bib: 
 	$(BIB) $(DOCUMENT_NAME)
 
-doc: 
-	$(XELATEX) $(DOCUMENT_NAME).tex
-
-doc_twice: 
-	$(XELATEX) $(DOCUMENT_NAME).tex
-	$(XELATEX) $(DOCUMENT_NAME).tex
-
 clean:
 	rm -f .log quit.tex *.acn *gdf *.glg *. glo *. gls *.ist *.lol *.nlo *.nls *.ps *.out *.dvi *.log *.aux *.blg *.toc *.log *.bbl *.lof *.lot *.idx *.brf *.ilg *.ind abschnitte/*.aux bilder/*.aux
+
+doc: 
+	$(XELATEX) $(DOCUMENT_NAME)
+
+doc_twice: 
+	$(XELATEX) $(DOCUMENT_NAME)
+	$(XELATEX) $(DOCUMENT_NAME)

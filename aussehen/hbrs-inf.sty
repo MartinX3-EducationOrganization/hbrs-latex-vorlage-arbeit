@@ -132,28 +132,6 @@ style=iso-authoryear, % or iso-numeric for numeric citation method
 \lstset{basicstyle=\ttfamily\small,commentstyle=\itshape,backgroundcolor=\color{light-gray}}
 \lstset{captionpos=b,extendedchars=true,inputencoding=utf8,breaklines=true,language=C++}
 
-% 
-% WORKAROUND, damit lstlistoflistings funktioniert:
-% Quelle: http://www.komascript.de/node/477
-%
-% \makeatletter% --> De-TeX-FAQ
-% \renewcommand*{\lstlistoflistings}{%
-% \begingroup
-% \if@twocolumn
-% \@restonecoltrue\onecolumn
-% \else
-% \@restonecolfalse
-% \fi
-% \lol@heading
-% \setlength{\parskip}{\z@}%
-% \setlength{\parindent}{\z@}%
-% \setlength{\parfillskip}{\z@ \@plus 1fil}%
-% \@starttoc{lol}%
-% \if@restonecol\twocolumn\fi
-% \endgroup
-% }
-% \makeatother% --> \makeatletter
-
 % versucht, Umbrueche zu erzwingen, auch wenn es zu Lasten
 % des Schriftbildes geht. Hier gewaehlt, damit auf keinen Fall
 % Woerter im Blocksatz ueber den Rand laufen.

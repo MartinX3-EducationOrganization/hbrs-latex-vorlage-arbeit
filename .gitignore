@@ -16,8 +16,8 @@
 *.ps
 *.sav
 *.toc
-images/*.aux
+*.glo
+*.ist
 out
-sections/*.aux
 #IntelliJ folder
 .idea

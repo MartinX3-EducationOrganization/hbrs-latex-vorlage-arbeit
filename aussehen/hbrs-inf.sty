@@ -76,7 +76,7 @@ style=iso-authoryear, % or iso-numeric for numeric citation method
 ]{biblatex}
 \addbibresource{datenbanken/Literaturverzeichnis.bib}
 
-%\usepackage{helvet} % Serifenlose Schrift - explizit
+%\usepackage{helvet} % Serifenlose Schrift – explizit
 %\renewcommand{\familydefault}{\sfdefault}
 
 \clubpenalty=10000 % schliesst Schusterjungen aus
@@ -165,15 +165,15 @@ style=iso-authoryear, % or iso-numeric for numeric citation method
 %%%%%%%%
 
 % Figure Item, Caption
-\newcommand{\fhbrsfigure}[2]{%
+\newcommand{\fhbrsfigure}[2]{
 \begin{figure}[h]
     #1
     \caption{#2}\label{fig:figure}
-\end{figure}%
+\end{figure}
 }
 
 % Graphicsname, Caption, width
-\newcommand{\fhbrsgraphics}[4]{%
+\newcommand{\fhbrsgraphics}[4]{
 \begin{figure}[h]
     \begin{center}
         \includegraphics[width=#3]{img/#1}
@@ -183,13 +183,13 @@ style=iso-authoryear, % or iso-numeric for numeric citation method
 }
 
 % pos, Caption, Columns
-\newenvironment{fhbrstable}[3]{%
+\newenvironment{fhbrstable}[3]{
 \begin{table}[#1]
 \caption{#3}
-    \begin{tabular*}{\textwidth}{#2}\label{tab:table}%
-}{ %
+    \begin{tabular*}{\textwidth}{#2}\label{tab:table}
+}{
 \end{tabular*}
-\end{table}%
+\end{table}
 }
 
 \newcommand{\code}[1]{\texttt{#1}}
@@ -198,11 +198,11 @@ style=iso-authoryear, % or iso-numeric for numeric citation method
 \newcommand{\introterm}[1]{\emph{#1}}
 
 % Name, Comment
-\newcommand{\introglosterm}[2]{%
+\newcommand{\introglosterm}[2]{
 \xglossary{name={#1},description={#2}}{\emph{#1}} % TODO Die Pakete glossary und ngerman sind veraltet, stattdessen babel und glossaries benutzen.
 }
 
-\newcommand{\introglostermshort}[3]{%
+\newcommand{\introglostermshort}[3]{
 \xglossary{name={#1},description={#2. #3}}{#1 (\emph{#2})} % TODO Die Pakete glossary und ngerman sind veraltet, stattdessen babel und glossaries benutzen.
 }
 

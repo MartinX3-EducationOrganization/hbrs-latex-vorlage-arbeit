@@ -16,14 +16,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{graphicx}
-%\usepackage[pdftex]{graphicx}
 \usepackage{ifpdf}
 \usepackage{datetime}
 \usepackage{rotating} %rotation of pictures
 \usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{xltxtra}
-%\setmainfont[Mapping=tex-text]{Frutiger Linotype}
 \setlength{\headheight}{1.3\baselineskip}
 
 \ifpdf
@@ -42,7 +40,6 @@
 \hypersetup{
 colorlinks = true,
 linkcolor = black,
-%   urlcolor = darkblue, % Bei Bedarf Schwarz machen
 urlcolor = black,
 citecolor = black,
 breaklinks = true,
@@ -76,15 +73,11 @@ style=iso-authoryear, % or iso-numeric for numeric citation method
 ]{biblatex}
 \addbibresource{datenbanken/Literaturverzeichnis.bib}
 
-%\usepackage{helvet} % Serifenlose Schrift – explizit
-%\renewcommand{\familydefault}{\sfdefault}
-
 \clubpenalty=10000 % schliesst Schusterjungen aus
 \widowpenalty=10000 % schliesst Hurenkinder aus
 
 \usepackage{setspace}
 
-%\onehalfspacing % einkommentieren für größeren zeilenabstand
 \parskip0.5ex % parskip auf font/2
 \parindent0ex % kein Einzug am Absatzbeginn
 
@@ -99,8 +92,6 @@ style=iso-authoryear, % or iso-numeric for numeric citation method
 \pagestyle{scrheadings}
 \clearmainofpairofpagestyles
 \addtokomafont{pageheadfoot}{\upshape}
-%\cfoot{Seite \pagemark\ von \pageref{LastPage}}
-%\ihead{\ThesisTitle}
 
 % Kopfzeile und Fußzeile definiert für Seiten zwischen Deckblatt und dem Hauptteil
 \newpagestyle{bisHauptteil}{
@@ -125,7 +116,6 @@ style=iso-authoryear, % or iso-numeric for numeric citation method
 
 
 % Quellcode einfuegen und highlighten
-%\usepackage{listingsutf8}
 \usepackage{listings}
 \definecolor{light-gray}{gray}{0.80}
 \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt,showstringspaces=false}

@@ -132,21 +132,21 @@
 %Makros
 %%%%%%%%
 
-% Figure Item, Caption
-\newcommand{\fhbrsfigure}[2]{
+% Figure Item, Caption, label
+\newcommand{\fhbrsfigure}[3]{
     \begin{figure}[h]
         #1
-        \caption{#2}\label{fig:figure}
+        \caption{#2}\label{fig:#3}
     \end{figure}
 }
 
-% Graphicsname, Caption, width
+% Graphicsname, Caption, width, label
 \newcommand{\fhbrsgraphics}[4]{
     \begin{figure}[h]
         \begin{center}
             \includegraphics[width=#3]{img/#1}
         \end{center}
-        \caption{\label{#4}#2}
+        \caption{#2}\label{fig:#4}
     \end{figure}
 }
 

@@ -13,17 +13,9 @@ verwendet.
 Einen Startpunkt zur Nutzung von [LaTeX][1] findest Du in unserer LEA Gruppe [Arbeiten mit LaTeX][7]. Sie steht allen
 Angehörigen der Hochschule offen.
 
-## Vorlage nutzen
-
-### Aufbau
-
-### Schreiben
-
-### Dokument erstellen
-
 ## Autoren
 
-### 2020
+### 2020-20**
 
 - Martin Dünkelmann
 

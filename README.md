@@ -5,7 +5,7 @@ der [Hochschule Bonn-Rhein-Sieg][3].
 
 ## Einstieg
 
-Um diese Vorlage nutzen zu können, muss [LaTeX][1] auf Deinem Rechner installiert sein. Als compiler wird `XeLaTeX`
+Um diese Vorlage nutzen zu können, muss [LaTeX][1] auf Deinem Rechner installiert sein. Als compiler wird `LuaLaTeX`
 verwendet.
 
 ### LEA Gruppe

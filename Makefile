@@ -6,8 +6,9 @@ LUALATEX = lualatex --output-directory=out
 default: 
 	@echo 'make all    | Erstelle das komplette Dokument inklusive bib-Datei für das Literaturverzeichnis'
 	@echo 'make bib    | Erstelle bib-Datei für Literaturverzeichnis'
-	@echo 'make doc    | Erstelle komplettes Dokument und lese die Ausgabe. Falls Fehler auftreten führe make bib oder make doc erneut aus.'
 	@echo 'make clean  | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
+	@echo 'make doc    | Erstelle komplettes Dokument und lese die Ausgabe. Falls Fehler auftreten führe make bib oder make doc erneut aus.'
+	@echo 'make glos   | Erstelle Dateien für Inhaltsverzeichnisse'
 
 all: doc gloss bib doc_twice
 

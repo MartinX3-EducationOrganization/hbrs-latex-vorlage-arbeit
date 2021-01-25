@@ -1,7 +1,7 @@
 DOCUMENT_NAME = Arbeit
 BIB = biber -output-directory=out # BibLaTeX
 GLOS = makeglossaries -d out # Glossaries
-LUALATEX = lualatex --output-directory=out
+LUALATEX = lualatex --shell-escape --output-directory=out
 
 default: 
 	@echo 'make all    | Erstelle das komplette Dokument inklusive bib-Datei für das Literaturverzeichnis'

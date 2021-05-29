@@ -32,9 +32,9 @@ Angehörigen der Hochschule offen.
 
 ## Lizenz
 
-Dieses Projekt ist unter der GNU GPLv3 lizenziert.  
+Dieses Projekt ist unter der GNU AGPLv3 lizenziert.  
 Weitere Informationen dazu unter [LICENSE.md][5].  
-Copyright (C) 2011 - 2021 [Free Software Lab][4].
+Copyright (C) 2011 - 2018 [Free Software Lab][4].
 
 [1]: https://www.latex-project.org/
 

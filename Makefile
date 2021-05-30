@@ -8,7 +8,7 @@ default:
 	@echo 'make bib    | Erstelle bib-Datei für Literaturverzeichnis'
 	@echo 'make clean  | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
 	@echo 'make doc    | Erstelle komplettes Dokument und lese die Ausgabe. Falls Fehler auftreten führe make bib oder make doc erneut aus.'
-	@echo 'make glos   | Erstelle Dateien für Inhaltsverzeichnisse'
+	@echo 'make gloss   | Erstelle Dateien für Inhaltsverzeichnisse'
 
 all: doc gloss bib doc_twice
 

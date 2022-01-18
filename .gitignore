@@ -15,6 +15,7 @@
 *.out
 *.ps
 *.sav
+*.tmp
 *.toc
 *.glo
 *.ist

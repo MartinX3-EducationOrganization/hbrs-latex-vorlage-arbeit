@@ -1,3 +1,6 @@
+Download
+artifact: [![CI](https://github.com/MartinX3-EducationOrganization/hbrs-latex-vorlage-arbeit/actions/workflows/ci.yml/badge.svg)](https://github.com/MartinX3-EducationOrganization/hbrs-latex-vorlage-arbeit/actions/workflows/ci.yml)
+
 # H-BRS LaTeX Vorlage
 
 Dies ist eine [LaTeX][1] Vorlage für wissenschaftliche Arbeiten gemäß den [Vorgaben][6] des [Fachbereichs Informatik][2]

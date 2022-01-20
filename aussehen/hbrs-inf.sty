@@ -5,11 +5,14 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{aussehen/hbrs-inf}[2022/01/18 hbrs-inf theming Package]
 
+% Enable the arial font
+\RequirePackage{fontspec}
+\setmainfont{Arial} % If an error tells you, that this font can't be found, please install it on your computer.
+
 \RequirePackage{graphicx}
 \usepackage[usenames]{xcolor}
 \RequirePackage{svg}
 \RequirePackage{datetime}
-\RequirePackage{fontspec}
 \setlength{\headheight}{1.3\baselineskip}
 
 \RequirePackage{hyperref}

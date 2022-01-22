@@ -1,9 +1,5 @@
-%! Package = hbrs-inf
-%! Author = martin
-%! Date = 18.01.22
-
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{aussehen/hbrs-inf}[2022/01/18 hbrs-inf theming Package]
+\ProvidesPackage{aussehen/hbrs-inf}[2022/01/23 hbrs-inf theming Package]
 
 % Enable the arial font
 \RequirePackage{fontspec}
@@ -13,7 +9,6 @@
 \usepackage[usenames]{xcolor}
 \RequirePackage{svg}
 \RequirePackage{datetime}
-\setlength{\headheight}{1.3\baselineskip}
 
 \RequirePackage{hyperref}
 
@@ -27,144 +22,90 @@
 }
 
 % Links anklickbar machen
-\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{darkblue}{rgb}{0, 0, 0.5}
 \hypersetup{
     colorlinks = true,
     linkcolor = black,
     urlcolor = black,
     citecolor = black,
-    breaklinks = true,
+    breaklinks = true
 }
 
 % Abkürzungsverzeichnis (muss vor ngerman stehen)
-\usepackage[acronym, toc]{glossaries-extra}
+\usepackage[acronym, nomain, toc]{glossaries-extra}
 \makeglossaries
 \loadglsentries{datenbanken/Abkuerzungsverzeichnis}
 
-% Deutsch und passende Seitenränder
-\usepackage[ngerman]{babel,isodate}
-\RequirePackage{csquotes}
-\usepackage[paper=a4paper,left=40mm,right=20mm,top=25mm,bottom=10mm]{geometry}
-\setlength{\footskip}{6mm} % Abstand Seitenzahl zu Text
+% Deutsch
+\usepackage[ngerman]{babel}
+\usepackage[ngerman]{isodate}
+
+% Seitenränder
+\usepackage[paper=a4paper, left=40mm, right=20mm, top=25mm, bottom=10mm]{geometry}
 
 %% Literatur
 % Zitate
+\RequirePackage{csquotes}
 \RequirePackage{hypernat}
 
 % Literaturverzeichnis nach ISO 690 (Nachfolger von DIN 1505)
 % Further help at https://github.com/michal-h21/biblatex-iso690
-\usepackage[style=iso-authoryear]{biblatex}
+\usepackage[style=iso-authortitle]{biblatex}
 \addbibresource{datenbanken/Literaturverzeichnis.bib}
+\KOMAoptions{bibliography=totocnumbered}
 
-\clubpenalty=10000 % schliesst Schusterjungen aus
-\widowpenalty=10000 % schliesst Hurenkinder aus
+% Abbildungsvereichnis im Inhaltsvereichnis auflisten
+\KOMAoptions{listof=totoc}
 
-\RequirePackage{setspace}
+% Zeilenabstand
+\RequirePackage[singlespacing]{setspace}
 
-\parskip0.5ex % parskip auf font/2
-\parindent0ex % kein Einzug am Absatzbeginn
+% Schriftgrößen
+\RedeclareSectionCommand[
+    afterskip=-2pt,
+    beforeskip=3pt
+]{chapter}
+\setkomafont{chapter}{\large}
+\RedeclareSectionCommand[
+    afterskip=0pt,
+    beforeskip=4pt,
+    runin=false,
+]{section}
+\setkomafont{section}{\normalsize}
+\RedeclareSectionCommand[
+    afterskip=0pt,
+    beforeskip=3pt,
+    runin=false
+]{subsection}
+\setkomafont{subsection}{\normalsize}
+\setkomafont{subsubsection}{\normalsize}
+\setkomafont{caption}{\small}
 
-\RedeclareSectionCommand[beforeskip=12pt,afterskip=5pt]{section}
-\RedeclareSectionCommand[beforeskip=11pt,afterskip=5pt]{subsection}
-\RedeclareSectionCommand[beforeskip=11pt,afterskip=5pt]{subsubsection}
-\RedeclareSectionCommand[beforeskip=11pt,afterskip=0pt]{paragraph}
+% Absatz
+\KOMAoptions{parskip=half}
 
-% Kopfzeile und Fußzeile default
-\RequirePackage{lastpage}
-\usepackage[automark]{scrlayer-scrpage}
+% Kopfzeile und Fußzeile
+\usepackage[headsepline, plainheadsepline]{scrlayer-scrpage}
 \pagestyle{scrheadings}
-\clearmainofpairofpagestyles
-\addtokomafont{pageheadfoot}{\upshape}
+\clearpairofpagestyles
+\addtokomafont{pagehead}{\small\normalfont}
+\ihead*{\ThesisTitle}
+\ofoot*{\pagemark}
 
-% Kopfzeile und Fußzeile definiert für Seiten zwischen Deckblatt und dem Hauptteil
-\newpagestyle{bisHauptteil}{
-        {\hfill}
-        {\hfill}
-        {\ThesisTitle\hfill}
-}
-{
-        {\hfill}
-        {\hfill}
-        {\hfill\pagemark}
-}
-
-\newpagestyle{Hauptteil}{
-        {\hfill}
-        {\hfill}
-        {\ThesisTitle\hfill}
-}
-{
-        {\hfill}
-        {\hfill}
-        {\hfill\ \pagemark}
-}
-
-
-% Quellcode einfuegen und highlighten
+% Quellcode einfügen und highlighten
 \RequirePackage{listings}
 \definecolor{light-gray}{gray}{0.80}
 \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt,showstringspaces=false}
-\lstset{basicstyle=\ttfamily\small,commentstyle=\itshape,backgroundcolor=\color{light-gray}}
-\lstset{captionpos=b,extendedchars=true,inputencoding=utf8,breaklines=true,language=C++}
+\lstset{basicstyle=\ttfamily\small, commentstyle=\itshape, backgroundcolor=\color{light-gray}}
+\lstset{captionpos=b, extendedchars=true, inputencoding=utf8, breaklines=true, language=C++}
 
-% Gantt-Diagramm unterstützung
+% Gantt-Diagramme
 \RequirePackage{pgfgantt}
 
-% versucht, Umbrueche zu erzwingen, auch wenn es zu Lasten
-% des Schriftbildes geht. Hier gewaehlt, damit auf keinen Fall
-% Woerter im Blocksatz ueber den Rand laufen.
-\tolerance 9999
-
-
-%%%%%%%%
-%Makros
-%%%%%%%%
-
-% Figure Item, Caption, label
-\newcommand{\fhbrsfigure}[3]{
-    \begin{figure}[h]
-        #1
-        \caption{#2}\label{fig:#3}
-    \end{figure}
-}
-
-% Graphicsname, Caption, width, label
-\newcommand{\fhbrsgraphics}[4]{
-    \begin{figure}[h]
-        \begin{center}
-            \includegraphics[width=#3]{img/#1}
-        \end{center}
-        \caption{#2}\label{fig:#4}
-    \end{figure}
-}
-
-% pos, Caption, Columns
-\newenvironment{fhbrstable}[3]{
-    \begin{table}[#1]
-        \caption{#3}
-        \begin{tabular*}{\textwidth}{#2}
-            \label{tab:table}
-        \end{tabular*}
-    \end{table}
-}
-
-\newcommand{\code}[1]{\texttt{#1}}
-\newcommand{\module}[1]{\texttt{#1}}
-
-\newcommand{\introterm}[1]{\emph{#1}}
-
-% Name, Comment
-\newcommand{\introglosterm}[2]{
-    \xglossary{name={#1},description={#2}}{\emph{#1}}
-}
-
-\newcommand{\introglostermshort}[3]{
-    \xglossary{name={#1},description={#2.\\#3}}{#1 (\emph{#2})}
-}
-
-% Text
-\newcommand{\todo}[1]{
-    \begin{itemize}
-        \color{red}{\item#1}
-    \end{itemize}
-}
+% TODO Workaround if an texlive version older than 2021 is used, like in github actions. The file gets added by github-actions.
+% To-dos
+\IfFileExists{aussehen/snaptodo.sty}{\RequirePackage{aussehen/snaptodo}}{\RequirePackage{snaptodo}}
+% Zwingt die To-dos auf die linke Seite.
+% Standardmäßig sind dese links oder rechts am Rand, je nachdem, wo die markierung im Text in Relation zur Blattmitte ist.
+% Da aber Universitäten seltsame formale Anforderungen haben, statt Standards zu nutzen, was in der TeX-Gesellschaft kritisiert wird, benötigen wir diesen Workaround.
+\snaptodoset{chain bias=-99in}

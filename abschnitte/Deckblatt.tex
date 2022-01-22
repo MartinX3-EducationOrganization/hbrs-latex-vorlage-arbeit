@@ -1,64 +1,58 @@
-\begin{titlepage}
-    \begin{Large}
-        \begin{flushleft}
-            \makebox[11cm][c]{
-                \parbox[c]{2.5cm}{\includegraphics[height=4ex]{bilder/fhlogo}\vspace{1.40cm}}
-                \parbox[c]{12.0cm}{
-                    \begin{flushleft}
-                        \small{
-                            \textbf{Hochschule\linebreak{}Bonn-Rhein-Sieg}
-                            \linebreak{}
-                            \textit{University of Applied Sciences}
-                            \linebreak{}
-                            \linebreak{}
-                            \textbf{Fachbereich \ThesisStudyCourseGerman}
-                            \linebreak{}
-                            \textit{Department of \ThesisStudyCourse}
-                        }
-                    \end{flushleft}
-                }
-            }
-        \end{flushleft}
-    \end{Large}
+\titlehead{
+    \raisebox{\dimexpr\ht\strutbox-\height\relax}{\includegraphics[height=0.94cm]{bilder/fhlogo}}\hfill
+    \begin{minipage}[t]{.832\linewidth}
+        \raggedright\Large
+        \begin{spacing}{0.90}
+            \textbf{Hochschule\\Bonn-Rhein-Sieg}\\
+            \textit{University of Applied Sciences}
+            \linebreak
+            \linebreak
+            \textbf{Fachbereich \ThesisStudyCourseGerman}\\
+            \textit{Department of \ThesisStudyCourse}
+        \end{spacing}
+    \end{minipage}
+}
 
-    \vspace{0.150\textheight}
-    \begin{center}
-        \begin{Huge}
-            \textbf{\ThesisSubjectType}
-        \end{Huge}\\
-        \vspace{2em}
-        \begin{Large}
-            im \ThesisType-Studiengang \ThesisStudyCourse
-        \end{Large}
-        \vspace{0.10\textheight}\\
-        \begin{Huge}
-            \textbf{\ThesisTitle}
-        \end{Huge}\\
-        \vspace{1em}
-        \begin{Large}
-            \ThesisSubject
-        \end{Large}\\
-        \vspace{2em}
-        \begin{Large}
-            \textbf{von}
-        \end{Large}\\
-        \vspace{1em}
-        \begin{Large}
-            \textbf{\ThesisAuthor}
-        \end{Large}\\
-    \end{center}
-    \vspace{0.100\textheight}
+\subject{
+    \vspace{2cm}
+    \begin{spacing}{1.25}
+        \fontsize{26}{26}\normalfont\ThesisSubjectType\\
+        \large\normalfont Studiengang \ThesisType~\ThesisStudyCourse
+    \end{spacing}
+    \vspace{2cm}
+}
 
-    \begin{Large}
-        \begin{flushleft}
-            \begin{tabular}{ll}
-                Betreuer:          & \ThesisSupervisorFirst    \\
-                Zweitbetreuer:     & \ThesisSupervisorSecond   \\
-                Externer Betreuer: & \ThesisSupervisorExternal \\
-                ~                  & \ThesisExternalCompany    \\
-                ~                  &                           \\
-                Eingereicht am:    & \ThesisPubDate
-            \end{tabular}
-        \end{flushleft}
-    \end{Large}
-\end{titlepage}
+\title{
+    \begin{spacing}{0.75}
+        \fontsize{20}{20}\normalfont\ThesisTitle
+    \end{spacing}
+}
+
+\subtitle{
+    \fontsize{20}{20}\normalfont\ThesisSubject
+    \vspace{2cm}
+}
+
+\author{
+    \fontsize{12}{12}\normalfont von\\
+    \\
+    \fontsize{14}{14}\ThesisAuthor
+    \vspace{2.5cm}
+}
+
+% Workaround, da sonst ein Standardwert in der falschen Stelle der Seite gesetzt wird.
+\date{}
+
+\publishers{
+    \large
+    \begin{tabular}{ll}
+        Erstprüfer     & \ThesisSupervisorFirst    \\
+        Zweitprüfer    & \ThesisSupervisorSecond   \\
+        Betreuer       & \ThesisSupervisorExternal \\
+        & \ThesisExternalCompany    \\
+        &                           \\
+        eingereicht am & \ThesisPubDate
+    \end{tabular}
+}
+
+\maketitle

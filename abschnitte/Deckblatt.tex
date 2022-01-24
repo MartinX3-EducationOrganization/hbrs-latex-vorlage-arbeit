@@ -1,6 +1,6 @@
-\titlehead{
+\begin{titlepage}
     \raisebox{\dimexpr\ht\strutbox-\height\relax}{\includegraphics[height=0.94cm]{bilder/fhlogo}}\hfill
-    \begin{minipage}[t]{.832\linewidth}
+    \begin{minipage}[t]{.825\linewidth}
         \raggedright\Large
         \begin{spacing}{0.90}
             \textbf{Hochschule\\Bonn-Rhein-Sieg}\\
@@ -11,48 +11,37 @@
             \textit{Department of \ThesisStudyCourse}
         \end{spacing}
     \end{minipage}
-}
 
-\subject{
-    \vspace{2cm}
-    \begin{spacing}{1.25}
-        \fontsize{26}{26}\normalfont\ThesisSubjectType\\
-        \large\normalfont Studiengang \ThesisType~\ThesisStudyCourse
-    \end{spacing}
-    \vspace{2cm}
-}
-
-\title{
-    \begin{spacing}{0.75}
-        \fontsize{20}{20}\normalfont\ThesisTitle
-    \end{spacing}
-}
-
-\subtitle{
-    \fontsize{20}{20}\normalfont\ThesisSubject
-    \vspace{2cm}
-}
-
-\author{
-    \fontsize{12}{12}\normalfont von\\
-    \\
-    \fontsize{14}{14}\ThesisAuthor
     \vspace{2.5cm}
-}
 
-% Workaround, da sonst ein Standardwert in der falschen Stelle der Seite gesetzt wird.
-\date{}
+    \begin{center}
+        \begin{spacing}{1.25}
+            \fontsize{26}{26}\normalfont\ThesisSubjectType\\
+            \large\normalfont Studiengang \ThesisType~\ThesisStudyCourse
 
-\publishers{
-    \large
-    \begin{tabular}{ll}
-        Erstprüfer     & \ThesisSupervisorFirst    \\
-        Zweitprüfer    & \ThesisSupervisorSecond   \\
-        Betreuer       & \ThesisSupervisorExternal \\
-        & \ThesisExternalCompany    \\
-        &                           \\
-        eingereicht am & \ThesisPubDate
-    \end{tabular}
-}
+            \vspace{2.65cm}
 
-\maketitle
+            \fontsize{20}{20}\normalfont\ThesisTitle\\
+            \fontsize{20}{20}\normalfont\ThesisSubject
+        \end{spacing}
+
+        \vspace{1.86cm}
+
+        \begin{spacing}{2.6}
+            \fontsize{12}{12}\normalfont von\\
+            \fontsize{14}{14}\ThesisAuthor
+        \end{spacing}
+
+        \vspace{3.5cm}
+
+        \large
+        \begin{tabular}{ll}
+            Erstprüfer     & \ThesisSupervisorFirst    \\
+            Zweitprüfer    & \ThesisSupervisorSecond   \\
+            Betreuer       & \ThesisSupervisorExternal \\
+            & \ThesisExternalCompany    \\
+            &                           \\
+            eingereicht am & \ThesisPubDate
+        \end{tabular}
+    \end{center}
+\end{titlepage}

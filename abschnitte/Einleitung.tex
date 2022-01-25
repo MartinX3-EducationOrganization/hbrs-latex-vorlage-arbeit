@@ -260,3 +260,23 @@ Hier steht ein Text.~\autocite{Wikipedia2011, Bruno2009}
 \glsxtrshort{nua} (\glsxtrlong{nua})\\
 \glsxtrshort{tdma} (\glsxtrlong{tdma})\\
 \glsxtrshort{ua} (\glsxtrlong{ua})
+
+\subsection{Quellcode}\label{subsec:quellcode}
+\begin{figure}[!ht]
+    \begin{center}
+        \begin{minted}{c}
+int main() {
+  printf("hello, world");
+  return 0;
+}
+        \end{minted}
+        \caption{Hier steht eingebetteter Quellcode}\label{fig:hier-steht-eingebetteter-quellcode}
+    \end{center}
+\end{figure}
+
+\begin{figure}[!ht]
+    \begin{center}
+        \inputminted{python}{anhang/example.py}
+        \caption{Dieser Quellcode ist in einer externen Datei ausgelagert}\label{fig:dieser-quellcode-ist-in-einer-externen-datei-ausgelagert}
+    \end{center}
+\end{figure}

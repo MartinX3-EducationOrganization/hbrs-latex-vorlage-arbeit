@@ -49,6 +49,9 @@
 % Seitenränder
 \RequirePackage{geometry}
 
+% Quellcode einfügen und highlighten
+\RequirePackage[outputdir=out]{minted} % Needs python installed and to be loaded before csquotes
+
 %% Literatur
 % Zitate
 \RequirePackage{csquotes}
@@ -96,13 +99,6 @@
 \addtokomafont{pagehead}{\small\normalfont}
 \ihead*{\ThesisTitle}
 \ofoot*{\pagemark}
-
-% Quellcode einfügen und highlighten
-\RequirePackage{listings}
-\definecolor{light-gray}{gray}{0.80}
-\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt,showstringspaces=false}
-\lstset{basicstyle=\ttfamily\small, commentstyle=\itshape, backgroundcolor=\color{light-gray}}
-\lstset{captionpos=b, extendedchars=true, inputencoding=utf8, breaklines=true, language=C++}
 
 % Gantt-Diagramme
 \RequirePackage{pgfgantt}

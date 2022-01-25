@@ -1,5 +1,6 @@
 DOCUMENT_NAME = Arbeit
-COMPILER = latexmk -lualatex --output-directory=out
+# The flag "--shell-escape" is needed by the package "minted"
+COMPILER = latexmk -lualatex --output-directory=out --shell-escape
 
 default:
 	$(COMPILER) $(DOCUMENT_NAME)

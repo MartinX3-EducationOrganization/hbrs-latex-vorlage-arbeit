@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{aussehen/hbrs-inf}[2022/01/23 hbrs-inf theming Package]
+\ProvidesPackage{aussehen/hbrs-inf}[2022/01/27 hbrs-inf theming Package]
 
 % Enable the arial font
 \RequirePackage{fontspec}
@@ -21,14 +21,13 @@
     pdfkeywords={\ThesisKeywords}
 }
 
-% Links anklickbar machen
-\definecolor{darkblue}{rgb}{0, 0, 0.5}
+% Farbe der Links
 \hypersetup{
+    breaklinks = true,
+    citecolor = black,
     colorlinks = true,
     linkcolor = black,
-    urlcolor = black,
-    citecolor = black,
-    breaklinks = true
+    urlcolor = black
 }
 
 % Tiefe der Kapitelnummerierung

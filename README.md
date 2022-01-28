@@ -51,4 +51,4 @@ Copyright © 2011 - 2018 [Free Software Lab][4].
 
 [6]: https://lea.hochschule-bonn-rhein-sieg.de/goto.php?target=file_215286_download&client_id=db_040811
 
-[7]: https://lea.hochschule-bonn-rhein-sieg.de/ilias.php?ref_id=230834&cmdClass=ilrepositorygui&cmdNode=v5&baseClass=ilRepositoryGUI
+[7]: https://lea.hochschule-bonn-rhein-sieg.de/ilias.php?ref_id=230834&cmdClass=ilrepositorygui&cmdNode=va&baseClass=ilRepositoryGUI

@@ -17,7 +17,7 @@ jobs:
           echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
           sudo apt-get install ttf-mscorefonts-installer
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Workaround for ubuntu 20.04 in github actions until textlive 2021 is used
         run: |
           wget https://mirrors.ctan.org/macros/latex/contrib/snaptodo.zip

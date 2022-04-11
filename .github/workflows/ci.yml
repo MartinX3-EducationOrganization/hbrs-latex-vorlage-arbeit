@@ -25,7 +25,7 @@ jobs:
       - name: Compile LaTeX document
         run: make
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Arbeit.pdf.zip
           path: out/Arbeit.pdf

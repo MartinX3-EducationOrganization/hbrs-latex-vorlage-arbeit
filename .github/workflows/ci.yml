@@ -23,7 +23,7 @@ jobs:
           wget https://mirrors.ctan.org/macros/latex/contrib/snaptodo.zip
           unzip -p snaptodo.zip snaptodo/snaptodo.sty > aussehen/snaptodo.sty
       - name: Compile LaTeX document
-        run: make
+        run: make build
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:

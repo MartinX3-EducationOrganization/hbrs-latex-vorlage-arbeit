@@ -101,9 +101,8 @@
 % Gantt-Diagramme
 \RequirePackage{pgfgantt}
 
-% TODO Workaround if an texlive version older than 2021 is used, like in github actions. The file gets added by github-actions.
 % To-dos
-\IfFileExists{aussehen/snaptodo.sty}{\RequirePackage{aussehen/snaptodo}}{\RequirePackage{snaptodo}}
+\RequirePackage{snaptodo}
 % Zwingt die To-dos auf die linke Seite.
 % Standardmäßig sind dese links oder rechts am Rand, je nachdem, wo die markierung im Text in Relation zur Blattmitte ist.
 % Da aber Universitäten seltsame formale Anforderungen haben, statt Standards zu nutzen, was in der TeX-Gesellschaft kritisiert wird, benötigen wir diesen Workaround.

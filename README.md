@@ -16,9 +16,12 @@ verwendet.
 Einen Startpunkt zur Nutzung von [LaTeX][1] findest Du in unserer LEA Gruppe [Arbeiten mit LaTeX][7]. Sie steht allen
 Angehörigen der Hochschule offen.
 
-### Problembehandlung: Arial wird von luaotfload nicht gefunden.
+## FAQ
 
-Unter Ubuntu 22.04:
+### Arial wird von luaotfload nicht gefunden.
+
+#### Unter Ubuntu 22.04:
+
 ```
 sudo apt install ttf-mscorefonts-installer  # Installiert nötige Fonts
 cd /usr/share/fonts/truetype/msttcorefonts/ # Wechselt in das Font Verzeichnis

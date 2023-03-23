@@ -35,14 +35,14 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
-% Abkürzungsverzeichnis (muss vor ngerman stehen)
-\RequirePackage[acronym, nomain, toc]{glossaries-extra}
-\makeglossaries
-\loadglsentries{datenbanken/Abkuerzungsverzeichnis.tex}
-
 % Deutsch
 \RequirePackage[ngerman]{babel}
 \RequirePackage[ngerman]{isodate}
+
+\RequirePackage[acronym,nomain,translate=babel]{glossaries}
+\RequirePackage[nopostdot,toc]{glossaries-extra}
+\makeglossaries
+\loadglsentries{datenbanken/Abkuerzungsverzeichnis.tex}
 
 % Seitenränder
 \RequirePackage{geometry}

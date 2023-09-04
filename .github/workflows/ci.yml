@@ -17,7 +17,7 @@ jobs:
           echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
           sudo apt-get install ttf-mscorefonts-installer
       - name: Set up Git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Compile LaTeX document
         run: make build
       - name: Upload artifact

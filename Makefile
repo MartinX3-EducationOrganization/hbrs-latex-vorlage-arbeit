@@ -7,7 +7,6 @@ default | help:
 	@echo 'make build | Erstelle das komplette Dokument mit latexmk'
 	@echo 'make clean | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
 	@echo 'make help | Zeigt die Hilfe'
-	@echo 'make start | Säubere das Arbeitsverzeichnis von temporären Dateien und Verzeichnissen.'
 
 build:
 	$(COMPILER) Arbeit

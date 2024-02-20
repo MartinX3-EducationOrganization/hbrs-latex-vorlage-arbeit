@@ -9,26 +9,6 @@
 \RequirePackage{svg}
 \RequirePackage{datetime}
 
-\RequirePackage{hyperref}
-
-% Metadaten der PDF-Datei setzen
-\hypersetup{
-    pdftitle={\ThesisTitle},
-    pdfsubject={\ThesisSubject},
-    pdfauthor={\ThesisAuthor},
-    pdfcreator={LuaLaTeX},
-    pdfkeywords={\ThesisKeywords}
-}
-
-% Farbe der Links
-\hypersetup{
-    breaklinks = true,
-    citecolor = black,
-    colorlinks = true,
-    linkcolor = black,
-    urlcolor = black
-}
-
 % Tiefe der Kapitelnummerierung
 % 3 = subsubsection
 % Default 2
@@ -106,3 +86,24 @@
 % Standardmäßig sind dese links oder rechts am Rand, je nachdem, wo die markierung im Text in Relation zur Blattmitte ist.
 % Da aber Universitäten seltsame formale Anforderungen haben, statt Standards zu nutzen, was in der TeX-Gesellschaft kritisiert wird, benötigen wir diesen Workaround.
 \snaptodoset{chain bias=-99in}
+
+% hyperref muss als letztes geladen werden, sonst ist die interne Verlinkung kaputt.
+\RequirePackage{hyperref}
+
+% Metadaten der PDF-Datei setzen
+\hypersetup{
+    pdftitle={\ThesisTitle},
+    pdfsubject={\ThesisSubject},
+    pdfauthor={\ThesisAuthor},
+    pdfcreator={LuaLaTeX},
+    pdfkeywords={\ThesisKeywords}
+}
+
+% Farbe der Links
+\hypersetup{
+    breaklinks = true,
+    citecolor = black,
+    colorlinks = true,
+    linkcolor = black,
+    urlcolor = black
+}

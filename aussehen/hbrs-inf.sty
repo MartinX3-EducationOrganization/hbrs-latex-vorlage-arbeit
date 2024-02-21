@@ -35,32 +35,6 @@
 \addbibresource{datenbanken/Literaturverzeichnis.bib}
 \KOMAoptions{bibliography=totocnumbered}
 
-% hyperref muss nach biblatex geladen werden, da sonst ist die Verlinkung der Fußnoten kaputt ist.
-\RequirePackage{hyperref}
-
-% Metadaten der PDF-Datei setzen
-\hypersetup{
-    pdftitle={\ThesisTitle},
-    pdfsubject={\ThesisSubject},
-    pdfauthor={\ThesisAuthor},
-    pdfcreator={LuaLaTeX},
-    pdfkeywords={\ThesisKeywords}
-}
-
-% Farbe der Links
-\hypersetup{
-    breaklinks = true,
-    citecolor = black,
-    colorlinks = true,
-    linkcolor = black,
-    urlcolor = black
-}
-
-% glossaries-extra muss nach hyperref geladen werden, da sonst ist die Verlinkung der Abkürzungen kaputt ist.
-\RequirePackage[acronym,nomain]{glossaries-extra}
-\makeglossaries
-\loadglsentries{datenbanken/Abkuerzungsverzeichnis.tex}
-
 % Abbildungsvereichnis im Inhaltsvereichnis auflisten
 \KOMAoptions{listof=totoc}
 
@@ -108,3 +82,30 @@
 % Standardmäßig sind dese links oder rechts am Rand, je nachdem, wo die markierung im Text in Relation zur Blattmitte ist.
 % Da aber Universitäten seltsame formale Anforderungen haben, statt Standards zu nutzen, was in der TeX-Gesellschaft kritisiert wird, benötigen wir diesen Workaround.
 \snaptodoset{chain bias=-99in}
+
+% hyperref muss zum Schluss geladen werden, da sonst diverse Seitenverlinkungen nicht richtig funktionieren.
+% Außer ein Paket gibt an nach hyperref geladen werden zu müssen.
+\RequirePackage{hyperref}
+
+% Metadaten der PDF-Datei setzen
+\hypersetup{
+    pdftitle={\ThesisTitle},
+    pdfsubject={\ThesisSubject},
+    pdfauthor={\ThesisAuthor},
+    pdfcreator={LuaLaTeX},
+    pdfkeywords={\ThesisKeywords}
+}
+
+% Farbe der Links
+\hypersetup{
+    breaklinks = true,
+    citecolor = black,
+    colorlinks = true,
+    linkcolor = black,
+    urlcolor = black
+}
+
+% glossaries-extra muss nach hyperref geladen werden, da sonst die Verlinkung der Abkürzungen kaputt ist.
+\RequirePackage[acronym,nomain]{glossaries-extra}
+\makeglossaries
+\loadglsentries{datenbanken/Abkuerzungsverzeichnis.tex}

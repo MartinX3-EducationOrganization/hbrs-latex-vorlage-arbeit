@@ -107,5 +107,6 @@
 
 % glossaries-extra muss nach hyperref geladen werden, da sonst die Verlinkung der Abkürzungen kaputt ist.
 \RequirePackage[acronym,nomain]{glossaries-extra}
+\setabbreviationstyle[acronym]{long-short} % Abkürzungen müssen bei der ersten Verwendung ausgeschrieben werden.
 \makeglossaries
 \loadglsentries{datenbanken/Abkuerzungsverzeichnis.tex}

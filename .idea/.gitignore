@@ -7,3 +7,5 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 /sonarlint/
+# GitHub Copilot persisted chat sessions
+/copilot/chatSessions

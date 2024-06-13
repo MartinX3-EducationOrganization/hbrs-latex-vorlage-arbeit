@@ -118,3 +118,8 @@
 
 % Behebt Warnungen durch die verbesserte Zusammenarbeit diverser Pakete mit den KOMA-Scripten via Macros
 \RequirePackage{scrhack}
+
+% Verhindert, dass die nächste Zeile auf einer neuen Seite landet. Z.B. ein Titel am Ende einer Seite und dessen Inhalt auf der nächsten.
+\makeatletter
+\newcommand{\avoidpagebreak}{\par\nobreak\@afterheading}
+\makeatother

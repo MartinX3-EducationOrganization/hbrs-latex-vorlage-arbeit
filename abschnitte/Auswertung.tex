@@ -1,9 +1,57 @@
 \chapter{Auswertung}\label{ch:auswertung}
 
+
+\section{Flowchart-Diagramm}\label{sec:flowchart-diagramm}
+\enquote{Prozesse sollten wann immer möglich grafisch modelliert werden!}
+Um textuell beschriebene Prozesse mit zugehörigen Varianten und Negativfällen besser zu verstehen, werden diese visualisiert und durch Beschreibungen ergänzt.
+Dazu eignen sich \enquote{Swimlane}-Diagramme.
+Diese gehören zur Gruppe der Prozessablaufdiagramme.
+
+
+\begin{figure}[H]
+    Hier wird ein beispielhaftes Flussdiagramm aufgezeigt.
+    \begin{center}
+        \begin{tikzpicture}[node distance=2cm]
+            \node (start) [startstop] {Start};
+
+            \node (in1) [io, below of=start] {Input};
+            \draw [arrow] (start) -- (in1);
+
+            \node (pro1) [process, below of=in1] {Process 1};
+            \draw [arrow] (in1) -- (pro1);
+
+            \node (dec1) [decision, below of=pro1, yshift=-1cm] {Decision 1};
+            \draw [arrow] (pro1) -- (dec1);
+
+            \node (pro2a) [process, below of=dec1, yshift=-1.5cm] {Process 2a with a long text};
+            \draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
+
+            \node (out1) [io, below of=pro2a, yshift=-0.5cm] {Output};
+            \draw [arrow] (pro2a) -- (out1);
+
+            \node (subpro1) [subprocess=33mm, right of=dec1, xshift=2.5cm] {A very long subprocess};
+            \draw [arrow] (dec1) -- node[anchor=south] {no} (subpro1);
+
+            \node (stop) [startstop, below of=out1] {Stop};
+            \draw [arrow] (subpro1) |- (stop);
+            \draw [arrow] (out1) -- (stop);
+        \end{tikzpicture}
+        \caption{Beispiel Flowchart}\label{fig:beispiel-flowchart}
+    \end{center}
+\end{figure}
+
 \begin{landscape}
-    \section{Flowchart-Diagramme}\label{sec:flowchart-diagramme}
-    \enquote{Prozesse sollten wann immer möglich grafisch modelliert werden!}
-    Um textuell beschriebene Prozesse mit zugehörigen Varianten und Negativfällen besser zu verstehen, werden diese visualisiert und durch Beschreibungen ergänzt.
-    Dazu eignen sich \enquote{Swimlane}-Diagramme.
-    Diese gehören zur Gruppe der Prozessablaufdiagramme.
+    \begin{figure}[H]
+        \begin{center}
+            \begin{tabular}{|c|c||c|c|c|c|c|c|c|c|c||c||c|c|}
+                \hline
+                P & Q & $\neg$ & ( P & $\vee$ & Q ) & $\vee$       & ( $\neg$ & P & $\wedge$ & Q ) & $\equiv$ & $\neg$       & P \\ \hline \hline
+                0 & 0 & 1      & 0   & 0      & 0   & $\mathbf{1}$ & 1        & 0 & 0        & 0   &          & $\mathbf{1}$ & 0 \\ \hline
+                0 & 1 & 0      & 0   & 1      & 1   & $\mathbf{1}$ & 1        & 0 & 1        & 1   &          & $\mathbf{1}$ & 0 \\ \hline
+                1 & 0 & 0      & 1   & 1      & 0   & $\mathbf{0}$ & 0        & 1 & 0        & 0   &          & $\mathbf{0}$ & 1 \\ \hline
+                1 & 1 & 0      & 1   & 1      & 1   & $\mathbf{0}$ & 0        & 1 & 0        & 1   &          & $\mathbf{0}$ & 1 \\ \hline
+            \end{tabular}
+            \caption{Wahrheitstabelle: $\neg$ ( P $\vee$ Q ) $\vee$ ( $\neg$ P $\wedge$ Q ) $\equiv$ $\neg$ P}\label{fig:figureFormulaTable0}
+        \end{center}
+    \end{figure}
 \end{landscape}

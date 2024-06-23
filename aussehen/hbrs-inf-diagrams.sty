@@ -11,15 +11,15 @@
 \tikzstyle{decision} = [
 diamond,
 draw=black, fill=green!30,
-minimum height=1cm, minimum width=3cm,
-text centered, text width=2cm
+minimum height=1cm,
+text centered, text width=3cm
 ]
 
 \tikzstyle{io} = [
 trapezium,
 draw=black, fill=blue!30,
-minimum height=1cm, minimum width=3cm,
-text centered, text width=2cm,
+minimum height=1cm,
+text centered, text width=3cm,
 trapezium left angle=70, trapezium right angle=110,
 trapezium stretches=true
 ]
@@ -27,31 +27,29 @@ trapezium stretches=true
 \tikzstyle{process} = [
 rectangle,
 draw=black, fill=orange!30,
-minimum height=1cm, minimum width=3cm,
-text centered, text width=2cm
+minimum height=1cm,
+text centered, text width=3cm
 ]
 
 \tikzstyle{startstop} = [
 rectangle,
 draw=black, fill=red!30,
-minimum height=1cm, minimum width=3cm,
+minimum height=1cm,
 rounded corners,
-text centered, text width=2cm
+text centered, text width=3cm
 ]
 
 \newcommand\ppbb{path picture bounding box}
 \tikzset{
     subprocess/.style = {
         rectangle,
-        align=flush center,
-        draw=black, fill=orange!30, semithick,
-        minimum height=1cm, minimum width=#1, inner xsep=3mm,
+        draw=black, fill=orange!30,
+        inner xsep=4mm, minimum height=1cm,
         path picture={
             \draw
             ([xshift=-2mm] \ppbb.north east) -- ([xshift=-2mm] \ppbb.south east)
             ([xshift=2mm] \ppbb.north west) -- ([xshift=2mm] \ppbb.south west);
         },
-        text width =\pgfkeysvalueof{/pgf/minimum width}-2*\pgfkeysvalueof{/pgf/inner xsep}
+        text centered, text width=3cm-2*\pgfkeysvalueof{/pgf/inner xsep}
     },
-    subprocess/.default = 24mm
 }

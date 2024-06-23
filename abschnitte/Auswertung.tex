@@ -20,16 +20,16 @@ Diese gehören zur Gruppe der Prozessablaufdiagramme.
             \node (pro1) [process, below of=in1] {Process 1};
             \draw [arrow] (in1) -- (pro1);
 
-            \node (dec1) [decision, below of=pro1, yshift=-1cm] {Decision 1};
+            \node (dec1) [decision, below of=pro1, yshift=-1.5cm] {Decision 1};
             \draw [arrow] (pro1) -- (dec1);
 
-            \node (pro2a) [process, below of=dec1, yshift=-1.5cm] {Process 2a with a long text};
+            \node (pro2a) [process, below of=dec1, yshift=-2cm] {Process 2a with a long text};
             \draw [arrow] (dec1) -- node[anchor=east] {yes} (pro2a);
 
             \node (out1) [io, below of=pro2a, yshift=-0.5cm] {Output};
             \draw [arrow] (pro2a) -- (out1);
 
-            \node (subpro1) [subprocess=33mm, right of=dec1, xshift=2.5cm] {A very long subprocess};
+            \node (subpro1) [subprocess, right of=dec1, xshift=2.5cm] {A very long subprocess};
             \draw [arrow] (dec1) -- node[anchor=south] {no} (subpro1);
 
             \node (stop) [startstop, below of=out1] {Stop};

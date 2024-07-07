@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install TeX Live
-        run: sudo apt update && sudo apt install biber latexmk texlive texlive-bibtex-extra texlive-lang-german texlive-latex-extra texlive-luatex
+        run: sudo apt update && sudo apt install biber inkscape latexmk texlive texlive-bibtex-extra texlive-lang-german texlive-latex-extra texlive-luatex
       - name: Install tikz-uml
         run: |
           wget https://perso.ensta-paristech.fr/~kielbasi/tikzuml/var/files/src/tikzuml-v1.0-2016-03-29.tbz -P /tmp

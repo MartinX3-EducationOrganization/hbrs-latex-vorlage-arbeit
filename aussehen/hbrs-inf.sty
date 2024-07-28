@@ -17,11 +17,12 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
-% Avoids overlapping of the chapter numbers and the title in the list of figures
-% This happens if the chapter numbr is 10.10 and higher
-\makeatletter
-\renewcommand*\l@figure{\@dottedtocline{1}{1em}{3.2em}}
-\makeatother
+% Avoids overflow in table of contents and list of figures
+\RequirePackage[titles]{tocloft}
+% Margin to the page number
+\cftsetrmarg{4em}
+% Margin from the figure number
+\cftsetindents{figure}{0em}{4em}
 
 % Deutsch
 \RequirePackage[ngerman]{babel}

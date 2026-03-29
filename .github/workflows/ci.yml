@@ -26,9 +26,9 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v6
       - name: Compile LaTeX document
-        run: make build
+        run: make build_ci
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
           archive: false
-          path: out/Arbeit.pdf
+          path: Arbeit.pdf

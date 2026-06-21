@@ -12,7 +12,7 @@ build:
 	$(COMPILER) --output-directory=out Arbeit
 
 build_ci:
-	$(COMPILER) Praesentation
+	$(COMPILER) Arbeit
 
 clean:
 	rm -rf out/

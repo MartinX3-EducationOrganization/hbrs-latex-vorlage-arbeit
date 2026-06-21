@@ -14,7 +14,7 @@ jobs:
         run: sudo apt update && sudo apt install biber inkscape latexmk texlive texlive-bibtex-extra texlive-lang-german texlive-latex-extra texlive-luatex
       - name: Install tikz-uml
         run: |
-          wget https://perso.ensta-paristech.fr/~kielbasi/tikzuml/var/files/src/tikzuml-v1.0-2016-03-29.tbz -P /tmp
+          wget https://perso.ensta.fr/~kielbasi/tikzuml/var/files/src/tikzuml-v1.0-2016-03-29.tbz -P /tmp
           tar -xjf /tmp/tikzuml-v1.0-2016-03-29.tbz -C /tmp
           mkdir -p ~/texmf/tex/latex/tikz-uml/
           cp /tmp/tikzuml-v1.0-2016-03-29/tikz-uml.sty ~/texmf/tex/latex/tikz-uml/
